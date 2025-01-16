@@ -50,5 +50,5 @@ Ensure the following folders have write permissions:
 This module is licensed under the AFL-3.0.
 
 ## Support
-For support, contact [support@yourcompany.com](mailto:itsupport@9psb.com.ng) or refer to the official documentation for PrestaShop module development.
+For support, contact [itsupport@9psb.com.ng](mailto:itsupport@9psb.com.ng) or refer to the official documentation for PrestaShop module development.
 
