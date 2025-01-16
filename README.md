@@ -1,45 +1,69 @@
-9PSB Payment Gateway Module for PrestaShop
-This module integrates the 9PSB payment gateway with PrestaShop, enabling secure and seamless payments for your online store.
+# PrestaShop Payment Module Installation Guide
 
-Features
-Secure payment processing with 9PSB
-Supports test and live environments
-Generates payment links and handles redirection
-Logs transaction responses for easy debugging
-Requirements
-PrestaShop 1.7 or higher
-PHP 7.2 or higher
-cURL and OpenSSL enabled
-Installation
-Download the Module
-Download the ZIP archive of the module from the repository or release page.
+This guide provides detailed steps to install and configure the payment module for PrestaShop.
 
-Upload the Module
+---
 
-Go to the PrestaShop admin dashboard.
-Navigate to Modules and Services > Module Manager.
-Click Upload a Module and select the ZIP archive.
-The module will be automatically installed.
-Configure the Module
+## Prerequisites
+1. Ensure your PrestaShop installation is version-compatible with this module.
+2. A valid API key, secret, or other credentials required by the payment provider.
+3. FTP or file manager access to your PrestaShop installation.
 
-In the module settings, provide the following details:
-Test Public Key and Test Secret Key
-Live Public Key and Live Secret Key
-Environment Mode (Test or Live)
-Callback URL for payment notifications
-Set Permissions
-Ensure the following folders have write permissions:
+---
 
-modules/paymentexample/logs/ (for logging errors and responses)
-Usage
-Once configured, customers can select 9PSB Payment as a payment method at checkout.
-After placing an order, they will be redirected to the payment gateway to complete the transaction.
-Troubleshooting
-Authentication Failure: Ensure API keys are correct for the environment set (test/live).
-Failed to Get Payment URL: Check if the callback URL is correctly set in your 9PSB dashboard.
-Enable logs by checking the modules/paymentexample/logs/ directory for detailed error messages.
-License
-This module is licensed under the AFL-3.0.
+## Installation Steps
 
-Support
-For support, contact support@yourcompany.com or refer to the official documentation for PrestaShop module development.
+### Option 1: Upload Module via PrestaShop Admin Panel
+
+1. Log in to your PrestaShop Back Office.
+2. Navigate to **Modules and Services** -> **Modules Manager**.
+3. Click on the **Upload a Module** button.
+4. Select the module’s `.zip` file and upload it.
+5. Follow the on-screen instructions to complete the installation.
+
+### Option 2: Manual Installation
+
+1. Unzip the module archive on your local machine.
+2. Connect to your server using FTP or a file manager.
+3. Upload the unzipped folder into the `modules/` directory of your PrestaShop installation.
+4. Go to **Modules Manager** in your Back Office and locate the new module.
+5. Click **Install** and follow any setup instructions.
+
+---
+
+## Configuration
+
+1. After installation, click on the **Configure** button.
+2. Enter the required configuration values:
+   - API Key
+   - Secret Key
+   - Callback URLs
+   - Environment settings (test/live)
+3. Save the configuration.
+
+---
+
+## Troubleshooting
+
+- Ensure file permissions are correct for the module directory.
+- Check for missing dependencies or conflicts with other modules.
+- Review PrestaShop logs for error messages if issues arise.
+
+---
+
+## Uninstallation
+
+1. Navigate to **Modules Manager**.
+2. Locate the payment module and click **Uninstall**.
+
+---
+
+## License
+
+This module is licensed under AFL-3.0. See LICENSE.md for details.
+
+---
+
+## Support
+
+For any issues or further assistance, please contact our support team at [Support Email].
