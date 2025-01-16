@@ -1,0 +1,47 @@
+/* Custom CSS for admin form */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.switch input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #ddd;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.switch input[type="checkbox"]:checked {
+    background-color: #28a745;
+}
+
+.switch input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.switch input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+}
