@@ -1,20 +1,45 @@
-# Example payment module
+9PSB Payment Gateway Module for PrestaShop
+This module integrates the 9PSB payment gateway with PrestaShop, enabling secure and seamless payments for your online store.
 
-## About
+Features
+Secure payment processing with 9PSB
+Supports test and live environments
+Generates payment links and handles redirection
+Logs transaction responses for easy debugging
+Requirements
+PrestaShop 1.7 or higher
+PHP 7.2 or higher
+cURL and OpenSSL enabled
+Installation
+Download the Module
+Download the ZIP archive of the module from the repository or release page.
 
-This repository provides an example to kick start your own payment module development. For more information, head on to the [Official Developer Documentation][documentation].
+Upload the Module
 
-## Contributing
+Go to the PrestaShop admin dashboard.
+Navigate to Modules and Services > Module Manager.
+Click Upload a Module and select the ZIP archive.
+The module will be automatically installed.
+Configure the Module
 
-PrestaShop modules are open source extensions to the [PrestaShop e-commerce platform][prestashop]. Everyone is welcome and even encouraged to contribute with their own improvements!
+In the module settings, provide the following details:
+Test Public Key and Test Secret Key
+Live Public Key and Live Secret Key
+Environment Mode (Test or Live)
+Callback URL for payment notifications
+Set Permissions
+Ensure the following folders have write permissions:
 
-Just make sure to follow our [contribution guidelines][contribution-guidelines].
+modules/paymentexample/logs/ (for logging errors and responses)
+Usage
+Once configured, customers can select 9PSB Payment as a payment method at checkout.
+After placing an order, they will be redirected to the payment gateway to complete the transaction.
+Troubleshooting
+Authentication Failure: Ensure API keys are correct for the environment set (test/live).
+Failed to Get Payment URL: Check if the callback URL is correctly set in your 9PSB dashboard.
+Enable logs by checking the modules/paymentexample/logs/ directory for detailed error messages.
+License
+This module is licensed under the AFL-3.0.
 
-## License
-
-This module is released under the [Academic Free License 3.0][AFL-3.0] 
-
-[documentation]: https://devdocs.prestashop-project.org/8/modules/payment/
-[prestashop]: https://www.prestashop-project.org/
-[contribution-guidelines]: https://devdocs.prestashop-project.org/8/contribute/contribution-guidelines/project-modules/
-[AFL-3.0]: https://opensource.org/licenses/AFL-3.0
+Support
+For support, contact support@yourcompany.com or refer to the official documentation for PrestaShop module development.
